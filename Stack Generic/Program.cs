@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Separator;
+using System;
 
 namespace Stack_Generic
 {
@@ -6,7 +7,11 @@ namespace Stack_Generic
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ConsoleSeparator consoleSeparator = new ConsoleSeparator('-', 50);
+            SeparateEvent separateEvent = new SeparateEvent();
+            separateEvent.OnSeparate += consoleSeparator.Separator;
+
+
         }
     }
 }
